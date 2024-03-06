@@ -41,10 +41,13 @@ def getTimeToSort(sortFunc, data):
     total = 0
     for i in range(0, 10):
         startTime = time.time()
-        sortFunc(data)
+        sortFunc(list(data))
         endTime = time.time()
-        print(f"Bubble Sort Random Data: {endTime - startTime} seconds")
+        print(f"Sort Data: {endTime - startTime} seconds")
         total += endTime - startTime
-    # print the average
+    print(f"Average: {total / 10}")
 
+#getTimeToSort(bubbleSort, randomData)
+#getTimeToSort(bubbleSort, reversedData)
+getTimeToSort(insertionSort, fewUniqueData)
 
